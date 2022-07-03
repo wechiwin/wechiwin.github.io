@@ -102,6 +102,64 @@ git push git@github.com:wechiwin/wechiwin.github.io.git master
 
 如果有自己的域名，需要在下面的Custom domain中输入自己的域名，点击save。关于自己域名的dns设置，请参考vuepress那篇文章，已经很清晰了。
 
+更新1.1
+
+增加了toc，但是此插件无法兼容第三方主题，所以还是用回默认的主题了。
+
+https://github.com/justintien/docsify-plugin-toc
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- head -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
+  <!-- Also insert you custom css -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/buuing/docsify-theme-blue/index.css" /> -->
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Ray Wei\'s Wiki',
+      repo: '',
+      search: 'auto', // 开启全文搜索(需要搭配下面的js代码)
+      auto2top: true,
+      loadSidebar: true,
+      toc: {
+        tocMaxLevel: 5,
+        target: 'h1, h2, h3, h4, h5'
+      },
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- plugin begin -->
+  <!-- toc -->
+  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
+  <!-- search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- copy code -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- sidebar collapse -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- body -->
+  <!-- plugin end -->
+</body>
+
+</html>
+```
+
+
+
 其他可以引入的插件
 
 ```html

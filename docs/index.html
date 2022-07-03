@@ -7,8 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/buuing/docsify-theme-blue/index.css" />
+  <!-- head -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
+  <!-- Also insert you custom css -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/buuing/docsify-theme-blue/index.css" /> -->
 </head>
 
 <body>
@@ -19,18 +22,25 @@
       repo: '',
       search: 'auto', // 开启全文搜索(需要搭配下面的js代码)
       auto2top: true,
-      loadSidebar: true
+      loadSidebar: true,
+      toc: {
+        tocMaxLevel: 5,
+        target: 'h1, h2, h3, h4, h5'
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- plugin begin -->
+  <!-- toc -->
+  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
   <!-- search -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- copy code -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- sidebar collapse -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- body -->
   <!-- plugin end -->
 </body>
 
