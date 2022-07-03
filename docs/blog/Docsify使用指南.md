@@ -108,6 +108,12 @@ git push git@github.com:wechiwin/wechiwin.github.io.git master
 
 https://github.com/justintien/docsify-plugin-toc
 
+更新1.2
+
+增加了更新时间的插件，同时加了一些代码语言高亮的插件
+
+https://github.com/pfeak/docsify-updated
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -134,9 +140,14 @@ https://github.com/justintien/docsify-plugin-toc
       search: 'auto', // 开启全文搜索(需要搭配下面的js代码)
       auto2top: true,
       loadSidebar: true,
+      routerMode: 'history', // 默认是hash，history可以去掉链接中的#
       toc: {
         tocMaxLevel: 5,
         target: 'h1, h2, h3, h4, h5'
+      },
+      timeUpdater: {
+        text: "<div align='left' width='200px' style='color:gray;font-size:16px'>Posted @ {docsify-updated}</div>",
+        formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
       },
     }
   </script>
@@ -151,19 +162,22 @@ https://github.com/justintien/docsify-plugin-toc
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- sidebar collapse -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- body -->
+  <!-- update time -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <!-- for code -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
   <!-- plugin end -->
 </body>
 
 </html>
 ```
 
-
-
 其他可以引入的插件
 
 ```html
-
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 <!-- 代码拷贝 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
