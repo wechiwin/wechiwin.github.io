@@ -114,6 +114,26 @@ https://github.com/justintien/docsify-plugin-toc
 
 https://github.com/pfeak/docsify-updated
 
+更新1.3
+
+发现更新的内容没有及时更新，猜测是因为没有更新部署，尝试一下使用vercel。
+
+https://vercel.com/
+
+注册什么的都很简单，这里详细说一下域名解析的事情，因为之前使用github pages绑定域名。
+
+将项目引入vercel后，在setting中的domain里输入自己的域名，vercel会生成两条解析指引。
+
+![image-20220704195559930](https://s2.loli.net/2022/07/04/TJax8H9o4tvmC5O.png)
+
+![image-20220704195839268](https://s2.loli.net/2022/07/04/U2Z5VGRbs9F3kQ7.png)
+
+进入namesilo的域名管理，将之前的解析全部删除，然后根据vercel给的重新添加。
+
+等待大概半个小时之后，再回到vercel，域名的解析已经更新完毕了，重新部署一次就可以了。	
+
+https://aaron-ai.com/docs/accelerate_github_pages_by_vercel/
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
